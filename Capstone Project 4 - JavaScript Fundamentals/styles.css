@@ -1,0 +1,683 @@
+@import url("https://fonts.google.com/share?selection.family=Playfair+Display:ital,wght@0,400..900;1,400..900|Qwitcher+Grypen:wght@400;700");
+@import url("https://fonts.google.com/share?selection.family=Anton|Playfair+Display:ital,wght@0,400..900;1,400..900|Qwitcher+Grypen:wght@400;700");
+@import url("https://fonts.google.com/share?selection.family=Anton|Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700|Playfair+Display:ital,wght@0,400..900;1,400..900|Qwitcher+Grypen:wght@400;700");
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px 50px;
+  margin: 0 auto;
+  max-width: 3250px;
+  padding: 30px 50px;
+  background-color: beige;
+}
+
+.chef-special-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px 50px;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 30px 50px;
+}
+
+.large-block {
+  grid-column: span 2;
+  position: relative;
+}
+.large-block a {
+  position: relative;
+  display: block;
+}
+.large-block img {
+  width: 100%;
+  max-width: 1600px;
+  height: 647px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: filter 0.3s ease;
+}
+.large-block:hover img {
+  filter: brightness(50%);
+}
+.large-block h2, .large-block h4 {
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  position: absolute;
+  width: 100%;
+  color: white;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.large-block h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-style: italic;
+  top: 40%;
+  transform: translateY(-200%);
+  font-size: 24px;
+}
+.large-block h4 {
+  font-family: "Crimson Text", serif;
+  top: 45%;
+  transform: translateY(200%);
+  font-size: 18px;
+  font-weight: 100;
+}
+.large-block:hover h2 {
+  opacity: 1;
+  transform: translateY(0);
+}
+.large-block:hover h4 {
+  opacity: 1;
+  transform: translateY(0);
+}
+.large-block .save-icon {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+.large-block .like-form {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+.large-block .like-form .like-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+.large-block .like-form .like-btn:hover {
+  color: red;
+}
+
+.small-block {
+  position: relative;
+}
+.small-block a {
+  position: relative;
+  display: block;
+}
+.small-block img {
+  width: 100%;
+  max-width: 800px;
+  height: 647px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: filter 0.3s ease;
+}
+.small-block:hover img {
+  filter: brightness(50%);
+}
+.small-block h2, .small-block h4 {
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  position: absolute;
+  width: 100%;
+  color: white;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.small-block h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-style: italic;
+  top: 40%;
+  transform: translateY(-200%);
+  font-size: 24px;
+}
+.small-block h4 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  top: 45%;
+  transform: translateY(200%);
+  font-size: 18px;
+  font-weight: 100;
+}
+.small-block:hover h2 {
+  opacity: 1;
+  transform: translateY(0);
+}
+.small-block:hover h4 {
+  opacity: 1;
+  transform: translateY(0);
+}
+.small-block .save-icon {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+.small-block .like-form {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+.small-block .like-form .like-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+.small-block .like-form .like-btn:hover {
+  color: red;
+}
+
+.save-icon {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: opacity 0.3s ease, color 0.3s ease;
+}
+.save-icon.active {
+  color: black;
+}
+
+.header, .footer {
+  text-align: center;
+  padding: 30px;
+}
+
+.header {
+  background-color: white;
+  padding: 20px;
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .logo-box {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding-left: 30px;
+}
+.header .logo {
+  max-width: 50%;
+  height: auto;
+}
+.header .navbar ul.navbar__menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.header .navbar ul.navbar__menu li {
+  display: flex;
+  align-items: center;
+}
+.header .navbar ul.navbar__menu li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+}
+.header .navbar ul.navbar__menu li a.fa {
+  font-size: 24px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: white;
+  border-top: 1px solid #ddd;
+}
+footer .footer__nav {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+footer .footer__copy {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.contact a {
+  position: relative;
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
+  padding-bottom: 5px;
+}
+.contact a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #000;
+  transition: width 0.3s ease;
+}
+.contact a:hover::after {
+  width: 100%;
+}
+.contact a:not(:hover)::after {
+  transition: width 0.2s ease;
+}
+
+.dropbtn {
+  font-size: 24px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none; /* Hide by default */
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  right: 0;
+}
+
+.dropdown-content a {
+  text-decoration: none;
+  display: block;
+  padding: 12px 16px;
+  color: black;
+}
+
+/* Hover effect only for dropdown links */
+.dropdown-content a:hover {
+  background-color: #f1f1f1; /* Background color on hover */
+}
+
+.chef-special-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px 50px;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 30px 50px;
+  background-color: beige;
+}
+
+.reservation-form-container {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-style: italic;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+}
+@media (max-width: 768px) {
+  .reservation-form-container {
+    padding: 15px;
+    width: 90%;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+input[type=date],
+textarea {
+  font-family: "Playfair Display", serif;
+  font-weight: 100;
+  font-style: italic;
+  height: 45px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+  width: 100%;
+}
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=tel]:focus,
+input[type=date]:focus,
+textarea:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+input[type=text].error,
+input[type=email].error,
+input[type=tel].error,
+input[type=date].error,
+textarea.error {
+  border-color: #e74c3c;
+}
+
+textarea {
+  height: 120px;
+  resize: vertical;
+}
+@media (max-width: 768px) {
+  textarea {
+    height: 100px;
+  }
+}
+
+button[type=submit] {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+button[type=submit]:hover {
+  background-color: #2980b9;
+}
+@media (max-width: 768px) {
+  button[type=submit] {
+    padding: 10px;
+    font-size: 16px;
+  }
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 14px;
+}
+@media (max-width: 768px) {
+  .error-message {
+    font-size: 12px;
+  }
+}
+
+.reservation-main {
+  background-image: url("Images/Savoury_dishes/chickpea_lasagne.jpg");
+  background-repeat: repeat;
+  background-size: auto;
+  padding: 100px 0;
+}
+@media (max-width: 768px) {
+  .reservation-main {
+    padding: 60px 0;
+  }
+}
+
+.reservation-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+@media (max-width: 768px) {
+  .reservation-wrapper {
+    flex-direction: column;
+  }
+}
+
+/* Dropdown content - hidden by default */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Show the dropdown when 'show' class is added */
+.dropdown-content.show {
+  display: block;
+}
+
+.about-page-reviews {
+  position: relative;
+  width: 70%;
+  height: 100px;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 100px;
+  color: rgb(223, 223, 195);
+}
+.about-page-reviews .review {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.about-page-reviews .review.active {
+  opacity: 1;
+}
+
+.about-container {
+  font-family: "Playfair Display", serif;
+  font-weight: 200;
+  font-style: italic;
+  background-image: url("Images/Drinks/coffee.jpg"); /* Image path to the background coffee image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 200px;
+  color: beige;
+}
+
+.like-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #fff;
+}
+
+.form-container {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-label {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.form-input, .form-textarea {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  color: #333;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.form-input:focus, .form-textarea:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+.form-textarea {
+  height: auto;
+  min-height: 120px;
+}
+
+.form-select {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  margin-bottom: 15px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.form-select:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+.form-checkbox, .form-radio {
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.form-error {
+  color: #e74c3c;
+  font-size: 14px;
+  margin-top: -15px;
+  margin-bottom: 15px;
+}
+
+.form-success {
+  color: #2ecc71;
+  font-size: 14px;
+  margin-top: -15px;
+  margin-bottom: 15px;
+}
+
+.form-btn {
+  display: inline-block;
+  background-color: #007BFF;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.form-btn:hover {
+  background-color: #0056b3;
+  color: #fff;
+}
+
+.form-btn:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.form-grid .form-input,
+.form-grid .form-textarea,
+.form-grid .form-select,
+.form-grid .form-btn {
+  grid-column: span 2;
+}
+.form-grid .form-input:nth-child(even),
+.form-grid .form-textarea:nth-child(even),
+.form-grid .form-select:nth-child(even),
+.form-grid .form-btn:nth-child(even) {
+  grid-column: span 1;
+}
+
+@media (max-width: 768px) {
+  .form-container {
+    padding: 10px;
+  }
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.form-file {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+.form-file input[type=file] {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+body {
+  background-image: url("Images/Desserts/cheesecake.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+}
+
+.header {
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 10;
+  padding: 10px;
+}
+
+.container {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 8px;
+  }
+  .container {
+    padding: 15px;
+    margin: 10px;
+  }
+}
+@media (max-width: 480px) {
+  .header {
+    font-size: 14px;
+    padding: 5px;
+  }
+  .container {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+  }
+}/*# sourceMappingURL=styles.css.map */

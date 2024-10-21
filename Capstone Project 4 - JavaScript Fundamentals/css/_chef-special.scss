@@ -1,0 +1,11 @@
+@import 'variables';
+
+.chef-special-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $padding-vertical $padding-horizontal;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: $padding-vertical $padding-horizontal;
+  background-color: $background-color;
+}

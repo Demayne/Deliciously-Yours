@@ -1,0 +1,115 @@
+@import 'variables';
+
+// Header and Footer Styles
+.header, .footer {
+    text-align: center;
+    padding: $padding-vertical;
+  }
+  
+  // Header Styling
+  .header {
+    background-color: white;
+    padding: 20px;
+  
+    .container {
+      display: flex;
+      justify-content: space-between; // Place the logo on the left and navbar on the right
+      align-items: center; // Align items vertically in the center
+    }
+  
+    .logo-box {
+      display: flex;
+      align-items: center;
+      justify-content: left; // Centers the logo within the flex box
+      padding-left: 30px;
+    }
+  
+    .logo {
+      max-width: 50%; // Ensure the logo fits within the box
+      height: auto; // Maintain aspect ratio
+    }
+  
+    .navbar {
+      ul.navbar__menu {
+        display: flex;
+        align-items: center; // Vertically aligns items within the flex container
+        gap: 20px; // Add spacing between items side by side
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+  
+        li {
+          display: flex;
+          align-items: center; // Aligns the content of each list item
+  
+          a {
+            display: flex;
+            align-items: center; // Aligns the text and icons within each anchor tag
+            text-decoration: none;
+            color: #000;
+            font-size: 18px;
+  
+            // Social media icon size
+            &.fa {
+              font-size: 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  // Footer Styling
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px $padding-horizontal;
+    background-color: white;
+    border-top: 1px solid #ddd;
+  
+    .footer__nav {
+      display: flex;
+      gap: 15px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+  
+    .footer__copy {
+      flex-grow: 1;
+      text-align: right;
+    }
+  }
+  
+  // Contact Link Hover Effect
+  .contact a {
+    position: relative;
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    font-weight: 600;
+    padding-bottom: 5px;
+    
+    // Add transition to the pseudo-element for smooth effect
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background-color: #000;
+      transition: width 0.3s ease; // Animate the width over time
+    }
+  
+    // When hovered, expand the width of the line
+    &:hover::after {
+      width: 100%;
+    }
+  
+    &:not(:hover)::after {
+      transition: width 0.2s ease; // Slightly faster transition back
+    }
+  }
+  
