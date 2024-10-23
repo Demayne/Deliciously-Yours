@@ -1,0 +1,59 @@
+// _save-for-later.scss
+
+// Import variables if needed
+@import 'variables';
+
+// Set the body background image
+body {
+    background-image: url('Images/Desserts/cheesecake.jpg'); // Background image
+    background-size: cover; // Ensure the background covers the entire viewport
+    background-position: center; // Center the background image
+    background-repeat: no-repeat; // Prevent the image from repeating
+    margin: 0; // Remove default body margin to avoid unintended spacing
+}
+
+// Header styles to ensure it stays white
+.header {
+    background-color: white; // Set the header background color to white
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Optional: Add a subtle shadow for depth
+    position: relative; // Ensure it sits above the body background
+    z-index: 10; // Bring the header above other elements
+    padding: 10px; // Add some padding for better appearance
+}
+
+// Container styles to enhance visibility over the background
+.container {
+    background-size: cover; // Ensure the image covers the container
+    background-position: center; // Center the background image in the container
+    background-repeat: no-repeat; // Prevent the image from repeating
+    background-color: rgba(255, 255, 255, 0.8); // Use a semi-transparent background for readability
+    padding: 20px; // Add some padding
+    border-radius: 8px; // Optional: round the corners
+    max-width: 800px; // Limit the width for larger screens
+    margin: 20px auto; // Center the container with margin on all sides
+}
+
+// Responsive styles
+@media (max-width: 768px) { // For tablets and mobile devices
+    .header {
+        padding: 8px; // Reduce padding on smaller screens
+    }
+
+    .container {
+        padding: 15px; // Adjust padding for smaller screens
+        margin: 10px; // Reduce margins for better fitting
+    }
+}
+
+@media (max-width: 480px) { // For mobile devices
+    .header {
+        font-size: 14px; // Adjust font size if needed
+        padding: 5px; // Further reduce padding on very small screens
+    }
+
+    .container {
+        padding: 10px; // Adjust padding for mobile devices
+        margin: 5px; // Minimal margins for mobile
+        border-radius: 5px; // Slightly smaller border radius
+    }
+}

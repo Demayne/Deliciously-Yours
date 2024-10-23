@@ -1,0 +1,26 @@
+Demayne Govender
+Capstone Project 4
+Task 20 - Javascript fundamentals
+
+I used my website from my previous Capstone Project.
+
+I implemented a save_for_later function which a user can click an icon to save menu items/categories to a save for later page.
+In doing so, they are alerted that their item was saved. If they had already saved that item, they will be alerted that it was already saved.
+The alert tells you exactly how many items are in the save for later folder too.
+
+Users can now leave a review of their experience at the restaurant when visiting the about page.
+
+A new like button has also been added. Users can heart their favorite meals/ menu categories.
+
+If users choose to visit the restaurant and would like to make a reservation, they can now do so by visiting our reservation page.
+
+The website is responsive and mobile-friendly.
+
+Within the entirety of your site, you should have at least the following
+jQuery functionality:
+● A function which contains hiding/showing. (hovering over the menu items/categories)
+● A drop-down menu. (click the menu icon on each page to view the dropdown)
+● Animation effects.(animated the menu icon to bounce as you load each page)
+● A function with chained effects (the menu icon has a chained effect which performs the chained effect when clicked. it drops down smoothly,
+and if clicked again, closes smoothly too. )
+
