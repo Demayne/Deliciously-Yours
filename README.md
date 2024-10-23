@@ -11,6 +11,7 @@ Welcome to the Deliciously Yours restaurant website! This project is designed to
 6. [Usage](#6-usage)
 7. [Contributing](#7-contributing)
 8. [License](#8-license)
+9. [Credits](#9-credits)  
 
 ## 1. Project Overview
 The Deliciously Yours website provides an interactive and visually engaging experience for users to explore a variety of restaurant dishes, beverages, and special menu items. Users can book tables, save recipes for later, read rotating customer reviews, and interact with like buttons for each dish.
@@ -94,6 +95,10 @@ If you want to contribute to this project:
 - Create a new Pull Request.  
 
 ## 8. License
-This project is open-source and available under the MIT License.
+This project is open-source and available under the MIT License.  
+
+## 9. Credits
+This project was created by:  
+- Demayne Govender -[ GitHub Profile](https://github.com/Demayne)
 
 Thank you for visiting Deliciously Yours! Enjoy the culinary journey.
