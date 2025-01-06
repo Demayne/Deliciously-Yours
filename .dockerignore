@@ -4,4 +4,6 @@ node_modules/
 *.tmp
 .git/
 .gitignore
-*.env
+Dockerfile
+.dockerignore
+README.md
